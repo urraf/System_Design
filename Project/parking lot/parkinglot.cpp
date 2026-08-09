@@ -173,7 +173,7 @@ public:
         for(auto spot: spots){
             if(spot->isavailable() && spot->getSize() == spotsize) return spot;
         }
-        throw invalid_argument("spot not availble");
+        return nullptr;
     }
 
     void occupySpot(ParkingSpot* spot, Vehicle* vehicle){
